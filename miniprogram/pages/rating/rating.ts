@@ -8,29 +8,32 @@ Page({
   data: {
     selectedBase64: '',
     demoBase64:'',
-    score:0,
-    charmScore:0,
-    marks:["加载中...","加载中","加载中","加载中"],
+    // 形似评分
+    morphScore:{
+      s1: 0,
+      s2: 0,
+      s3: 0,
+    },
+    // 神似评分
+    charmScore: '获取评分中',
+    // 总分
+    totalScore: '获取评分中',
+    marks:["加载中...","加载中...","加载中...","加载中..."],
+    style:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options:any) {
-    this.setData({ selectedBase64: options.selectedBase64,})
-    this.getDemoBase64(options)
+    this.setData({ 
+      demoBase64:options.demoBase64,
+      selectedBase64: options.selectedBase64,
+      style:options.style,
+      charmScore:Number(options.charmScore).toFixed(4)
+    })
     await this.getScore()
     await this.getComment()
-  },
-  /**
-   * 获取标准字图片
-   */
-  getDemoBase64(options:any){
-    /**
-     * 这里需要补全获取到标准字图的逻辑，为了代码能跑，我只写了个demoBase64=selectedBase64
-     */
-
-    this.setData({demoBase64:options.selectedBase64})
   },
   /**
    * 回到首页
@@ -38,6 +41,15 @@ Page({
   home:function(){
     wx.redirectTo({
       url: '../index/index',
+    })
+  },
+  /**
+   * 计算总评分
+   */
+  calcTotalScore:function(){
+    const totalScore:number=50*this.data.morphScore.s1 + 20*this.data.morphScore.s2 + 35*this.data.morphScore.s3+30*this.data.charmScore
+    this.setData({
+      totalScore: Number(totalScore).toFixed(4)
     })
   },
   /**
@@ -52,13 +64,14 @@ Page({
       },
       method: 'POST',
       modalTitle:"获取评分中",
-      timeout:6 * 60 * 1000,  //等待6分钟
+      timeout:2 * 60 * 1000,  //等待2分钟
     })
     .then(res=>{
+      console.log("看看评分返回", res)
       this.setData({
-        score:res.score,
-        charmScore:res.s4,
+        morphScore:res
       })
+      this.calcTotalScore()
     })
     .catch(err=> {
       console.log("评分出错",err)
@@ -84,6 +97,17 @@ Page({
       console.log("评价出错",err)
     })
   },
+/**
+ * 返回上一级
+ */
+back:function(){
+  let pages = getCurrentPages();
+  console.log("打印页面栈",pages)
+  wx.navigateBack();
+},
+
+
+
   /**
    * 前往我的
    */

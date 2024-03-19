@@ -57,10 +57,18 @@ Page ({
       return
     }
     let selectedBase64 = this.data.character[this.data.currentImageIndex - 1].src;
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../style/style' + '?' + 'selectedBase64=' + selectedBase64,
     })
   },  
+/**
+ * 返回上一级
+ */
+back:function(){
+  let pages = getCurrentPages();
+  console.log("打印页面栈",pages)
+  wx.navigateBack();
+},
   /**
   * 前往我的
   */

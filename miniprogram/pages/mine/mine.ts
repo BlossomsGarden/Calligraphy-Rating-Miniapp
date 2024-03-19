@@ -24,6 +24,8 @@ Component({
     },
 
     back(){
+      let pages = getCurrentPages();
+      console.log("打印页面栈",pages)
       wx.navigateBack();
     },
 

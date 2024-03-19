@@ -34,24 +34,31 @@ Page({
           filePath: filePath, //临时文件路径
           url: app.globalData.baseUrl + 'upload',  //填写服务器接口的访问地址
           name: 'imgs',  //name对应接口所需要传递的图片的key
-          timeout: 5000,
+          timeout: 30000000,
           success(res2) {
             wx.hideLoading()
             //目前小程序获取不到图片本地的完整名称,都是临时文件路径，因此是乱码
             console.log("上传成功",res2)
-            thatT.setData({ uploadBase64: JSON.parse(res2.data).base64 })
-            // 根据type的值决定接下来的操作
-            if (type === 'single') {
-              console.log('上传单字，直接识别');
-              wx.redirectTo({
-                url: '../style/style' + '?' + 'selectedBase64=' + that.data.uploadBase64,
-              })
-            } 
-            else if (type === 'practice') {
-              console.log('上传习作，跳转切割页面');
-              wx.redirectTo({
-                url: '../split/split' + '?' + 'uploadBase64=' + that.data.uploadBase64,
-              })
+            if(res2.statusCode==200){
+              thatT.setData({ uploadBase64: JSON.parse(res2.data).base64 })
+              // 根据type的值决定接下来的操作
+              if (type === 'single') {
+                console.log('上传单字，直接识别');
+                wx.navigateTo({
+                  url: '../style/style' + '?' + 'selectedBase64=' + that.data.uploadBase64,
+                })
+              } 
+              else if (type === 'practice') {
+                console.log('上传习作，跳转切割页面');
+                wx.navigateTo({
+                  url: '../split/split' + '?' + 'uploadBase64=' + that.data.uploadBase64,
+                })
+              }
+            }
+            else{
+              console.log("上传失败",res2)
+              wx.hideLoading()
+              wx.showToast({ title: '上传失败，请重试',icon:"none", duration: 2000 })
             }
           },
           fail(res3){

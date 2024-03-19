@@ -4,5 +4,18 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/ocrerror/ocrerror",
+          "pathName": "pages/ocrerror/ocrerror",
+          "query": "selectedBase64=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWkAAAE9CAYAAADJZJOvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAEdRSURBVHhe7Z0HnBzFmcV1Pp9xOKczIJNBRIMQJggwiGyBSSJHAQaEwYDJSWSRhBDC5CAQOZucRBIZk6NAJBGFARuLYB1gMPjq9v/N1oTenp3ume6e7p33fr+Pmhots7MdXr969dVX/ZwgCIKQW4ikBUEQcgyRtCAIQo4hkhYEQcgxRNKCIAg5hkhaEAQhxxBJC4Ig5BgiaUEQhBxDJC0IgpBjiKQFQRByDJG0IAhCjpEZSf/f/3W/EARBECJDSloQBCHHEEkLgiDkGCJpQRCEHCMxkg5azkEP+v9kSguCIMSGlLQgCEKOkTpJS0ALgiA0DylpQRCEHKNpku7pOXe/6EbQg5YnLQiCEB9S0oIgCDlGyyQd1Mf1FLZ0tCAIQnxISQuCIOQYdUm6sUKufSNuXxAEQWgMKWlBEIQcIzZJB/WwF8j+/XK/3JZeSEgLgiDEh5S0IAhCjlEm6aDS7dmvfSNq378b/HdBEAShMaSkBUEQcoyGJB0UwL4fVMjl9+v2u98QBEEQIkNKWhAEIceo8qRrlW6zff9uud/9RvDnBUEQhMZIVUmLlgVBEFpDvyCRBgVvRQn7tvSicT+8FQRBEKJDnrQgCEKOEduT9u9WFLI1kfuCIAhCdCSqpIM0LF4WBEFoDf3KSrfU1FXAPfvNtYIgCEJ0ZOJJi54FQRCaQ0NP2r9bUcTWxOjXtoIgCEJ0tKSkg7Qb5GHxsiAIQmvo16wibrYVBEEQoiMRTzpIv0E+Fj8LWQNR8O9//9vim2++yTT4nRIlQlIorzisKF5rYvTjtYKQJiDIL774wj3zzDNuwoQJbo899nBDhw51Q4YMySTWW289t++++7pLLrnETZkyxb6Lrn2hFfSqpIOXVvBai9sXhLQAERJff/21mzFjhrv33nvd4Ycf7lZddVX33//9365fv36ZxMwzz+zWXHNNN3r0aPfoo4+6f/zjH2V17cN/V0GIgl486XRaQUgaXFtfffWVkfNf//pXN3XqVHfNNde4vffe2/3qV79yP/jBD0IJNY34n//5H7fKKqu4kSNHultuucW9+uqrbtq0ae7dd9+1eP/999306dPdZ5995v71r3/pvhAaoilPOnhZ+evMv1+vLwhJA5JDnf797393L7zwgrvzzjvdhRdeaCS5wQYbuEUWWcR997vfDSXUNOKHP/yhW3zxxd1mm23mjjjiCDd+/Hh30UUXuYsvvtgsEB4eDzzwgJH3J598YipbEHpDZcVh94vG/dZaQUgSXFcQ3euvv27KdezYsW7EiBFurbXWcksssYT7+c9/7r797W+HEmoaMdNMM7nZZ5/dLbXUUm7dddd1w4cPd7/97W8ttt9+e1P3Z555ptkx7733ntkzgtAbapR0kEaDvNq4X/tGmaDtv4KQHFDPkDOWweeff+6efPJJd8YZZ7jtttvOlCxE+dOf/tR973vfc9/61rdCCTWN+M///E/3/e9/3/3sZz9zc845pxswYICbf/75LRZYYAG34oorut133708sfi///u/9jfwt0jICGGo8qSzaQUhCXz55Zfu448/dn/5y1/cK6+8YjbCfvvt51ZaaaVMJwrjxH/8x3+Ysl9nnXXc0Ucf7SZOnGi2xwcffGATjPKohTCEetLBy6RHv/sN/36536AVhKTA5NvkyZPd7bffbql2eNAbbrihW3TRRTP1oOMEJI26X3rppd3WW2/tRo0aZYr6nnvuMbL+9NNP5VELPRDBk062FYQk8NZbb7nbbrvNnXDCCWZxrL766m7gwIGmVP/rv/4rlCTbHZA09stcc81lRI1njfWBR81kIpkf8qiFIGo96QCPNu53E7D9t5d+V+PfE4RmgAe",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

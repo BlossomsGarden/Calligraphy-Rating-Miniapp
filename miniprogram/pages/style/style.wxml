@@ -1,10 +1,16 @@
 <view class="page-background">
-  <image src="../../static/mine.png" style="height: 30px;width: 60px;margin-top: 8%;" bindtap="toMine"></image>
-
+  <image src="../../static/left_2.png" style="height:28px;width:28px;margin-top:8%;margin-left:0%;" bindtap="back"></image>
+  
+  <image src="../../static/mine_2.png" style="height:28px;width:28px;margin-top:14%;margin-left:56%;border-radius:40px;border:0.5px solid rgba(0, 0, 0, 0.5);wxcs_style_border:1rpx solid rgba(0, 0, 0, 0.5);" bindtap="toMine"></image>
+  
+   <!-- <view style="height: 35px;width: 30px;margin-top:14%;">
+  <image src="../../static/mine.png" style="margin-left: 65%;" bindtap="toMine"></image>
+  <image src="../../static/left.png" style="margin-left: 5%;" bindtap="back"></image>
+</view> -->
   <view class="navbar">
     <text class="title">上传图片</text>
     <text class="title active">书法风格</text>
-    <text class="title">获取评分</text>
+    <text class="title">书法评分</text>
   </view>
 
   <view class="navbar">
@@ -13,7 +19,27 @@
     <div class="dot"></div>
   </view>
 
-  <image src="{{selectedBase64}}" style="width: 200px;height: 200px;" />
-  <button bindtap="gotoPage">按钮</button>
+  <view style="display:flex;align-items:center;width: 80%;margin: 2% auto 10%;">
+    <view class="left-notice">
+      <text style="font-size: 17px;">识别结果：</text>
+      <text style="font-weight:bolder;font-size:22px;color: darkblue;">{{wenzi_ch}}</text>
+    </view>
+    <button class="right-notice" catchtap="gowrong">识别错误?</button>
+  </view>
 
+  <view style="display:flex;justify-content: center;">
+    <image src="{{selectedBase64}}" style="width: 200px;height: 200px;" />
+  </view>
+
+  <!-- <view style="margin: 8% auto 1%;"></view>
+  <view class="card" mode="aspectFit" bindtap="gotoPage_1">{{styles_1}}</view>
+  <view style="margin: 5% auto 1%;"></view>
+  <view class="card" mode="aspectFit" bindtap="gotoPage_2">{{styles_2}}</view>
+  <view style="margin: 5% auto 1%;"></view>
+  <view class="card" mode="aspectFit" bindtap="gotoPage_3">{{styles_3}}</view> -->
+  
+  <view wx:for="{{first3StyleList}}" wx:for-index="index" >
+    <view class="card-{{index}}" mode="aspectFit" bindtap="selectStyle" data-id="{{index}}">{{item.font_name}}</view>
+  </view>
+  <!-- <view class="card_return_last" mode="aspectFit" bindtap="back">返回上一页</view> -->
 </view>

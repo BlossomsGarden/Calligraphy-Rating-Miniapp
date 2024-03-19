@@ -93,3 +93,15 @@ page {
   height: 58px;
   background: #F0F1F5;
 }
+
+.card_return_last{
+  margin: auto;
+  margin-top: 8%;
+  display: flex; 
+  justify-content: center;
+  font-size: 18px;
+  color: #8798BA;
+  text-underline-position: under;
+  text-decoration: underline;
+}
+

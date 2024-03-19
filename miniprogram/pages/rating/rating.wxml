@@ -1,10 +1,18 @@
 <view class="page-background">
-  <image src="../../static/mine.png" style="height: 30px;width: 60px;margin-top: 8%;" bindtap="toMine"></image>
+  <!-- <image src="../../static/left.png" style="height: 35px;width: 30px;margin-top:14%;margin-left: 0%;" bindtap="back"></image> -->
 
+  <image src="../../static/left_2.png" style="height:28px;width:28px;margin-top:8%;margin-left:0%;" bindtap="back"></image>
+  
+  <image src="../../static/mine_2.png" style="height:28px;width:28px;margin-top:14%;margin-left:56%;border-radius:40px;border:0.5px solid rgba(0, 0, 0, 0.5);wxcs_style_border:1rpx solid rgba(0, 0, 0, 0.5);" bindtap="toMine"></image>
+  
+<!-- <view style="height: 35px;width: 30px;margin-top:14%;">
+  <image src="../../static/mine.png" style="margin-left: 65%;" bindtap="toMine"></image>
+  <image src="../../static/left.png" style="margin-left: 5%;" bindtap="back"></image>
+</view> -->
   <view class="navbar">
     <text class="title">上传图片</text>
     <text class="title">书法风格</text>
-    <text class="title active">获取评分</text>
+    <text class="title active">书法评分</text>
   </view>
 
   <view class="navbar">
@@ -20,7 +28,7 @@
 
   <view style="display:flex;align-items:center;width: 80%;margin: 10% auto 3%;">
     <text class="left-title">评分：</text>
-    <text class="right-title">{{score}}</text>
+    <text class="right-title">{{totalScore}}</text>
   </view>
   <view class="line"></view>
 
@@ -38,6 +46,7 @@
     <text wx:for="{{marks}}" class="content">{{item+'\n'}}</text>
   </view>
   <view class="line"></view>
-
+ 
   <view class="card" mode="aspectFit" bindtap="home">返回首页</view>
+  <!-- <view class="card_return_last" mode="aspectFit" bindtap="back">返回上一页</view> -->
 </view>

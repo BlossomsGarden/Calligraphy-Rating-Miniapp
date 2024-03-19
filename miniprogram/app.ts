@@ -2,7 +2,8 @@
 App<IAppOption>({
   globalData: {
     userInfo:undefined,
-    baseUrl:'http://localhost:9999/',
+    // baseUrl:'http://localhost:9999/'
+    baseUrl:'https://api.ihanzi.net/calligraphy-rating/',
   },
   onLaunch() {
     // 展示本地存储能力

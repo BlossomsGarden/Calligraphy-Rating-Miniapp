@@ -1,11 +1,14 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/mine/mine",
     "pages/split/split",
     "pages/style/style",
     "pages/rating/rating",
     "pages/ocrerror/ocrerror"
+
+   
   ],
   "window": {
     "navigationBarTextStyle": "black",

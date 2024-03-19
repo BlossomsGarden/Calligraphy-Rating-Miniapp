@@ -56,3 +56,27 @@ page {
   background: linear-gradient(90deg, #000000 1.0%, #9A9A9A 70%);
   margin: auto;
 }
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.title {
+  font-size: 18px;
+  text-align: center;
+  color: #00093b63;
+}
+.title.active{
+  color: #29354F;
+}
+.dot {
+  width: 8px; /* 圆点大小 */
+  height: 8px; /* 圆点大小 */
+  border-radius: 5px; /* 圆点半径 */
+  background-color: #00093B38; /* 非活动圆点颜色 */
+  margin: 0 5px; /* 圆点间隔 */
+}
+.dot.active {
+  background-color: #29354F;
+}

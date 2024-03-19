@@ -1,22 +1,41 @@
 <scroll-view class="scrollarea" scroll-y type="list">
   <image src="../../static/tjbk.png" class="background-image"></image>
-  <image src="../../static/left.png" class="arrow-left" bindtap="back"></image>
+  <!-- <image src="../../static/left.png" class="arrow-left" bindtap="back"></image> -->
+  
+  <image src="../../static/left_2.png" style="height:28px;width:28px;margin-top:14%;margin-left:0%;" bindtap="back"></image>
+  <!-- border-radius:40px;border:0.5px solid rgba(0, 0, 0, 0.5);wxcs_style_border:1rpx solid rgba(0, 0, 0, 0.5); -->
+  <!-- <view style="margin-top: -9%;margin-left: 56%;">关于我们：</view> -->
+  <view class="navbar">
+    <text class="title active">关于我们</text>
+  </view>
+  <!-- <view class="navbar">
+    <div class="dot active"></div>
+  </view> -->
+
+
+
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" />
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
   <view style="display:flex;align-items:center;width: 80%;margin: 10% auto 1%;" bindtap="getUserProfile">
-    <text style="font-size: 16px;color: black;flex-grow: 1;">账号登录</text>
-    <image src="../../static/right.png" style="height: 30px;width:30px;right: 0;color: black;" />
+    <!-- <text style="font-size: 16px;color: black;flex-grow: 1;">账号登录</text> -->
+    <!-- <image src="../../static/right.png" style="height: 30px;width:30px;right: 0;color: black;" /> -->
   </view>
-  <view class="line"></view>
-  <view style="margin-top: 10%;margin-left: 10%;">关于我们：</view>
-  <image src="../../static/tjfg.png" style="max-width: 80%;display: flex;height: 10%;margin:10% auto 5%;"/>
-  <text style="margin-left: 10%; width: 80%;display: flex;line-height: 16px;">
-    本小程序由同济大学叶晨老师字字珠济\n
-    团队开发，开发人员：\n
-    汪林辉 曾雯欣 蒋天逸 \n
-    楼亿 李心悦 车艺莹 杨阳璐\n
-  </text>
+  <!-- <view class="line"></view> -->
+  <!-- <view style="margin-top: 10%;margin-left: 10%;">关于我们：</view> -->
+  <image src="../../static/tjfg.png" style="max-width: 110%;display: flex;height: 10%;margin:10% auto 5%;"/>
+  <!-- <text style="margin-left: 10%; width: 80%;display: flex;line-height: 16px;">
+"云墨济心"由同济大学叶晨老师团队开发\n
+开发人员：\n
+书法评分：汪林辉 蒋天逸 楼亿 车艺莹\n
+书法风格：曾雯欣 李心悦 张晟豪\n
+</text> -->
+
+<!-- <view style="margin-left: 10%; width: 80%;display: flex;line-height: 16px;"> -->
+<text style="margin-left: 10%; width: 80%;display: flex;line-height: 30px;">"云墨济心"由同济大学叶晨老师团队开发</text>
+<text style="margin-left: 10%; width: 80%;display: flex;line-height: 30px;">书法评分：汪林辉 蒋天逸 楼亿 车艺莹</text>
+<text style="margin-left: 10%; width: 80%;display: flex;line-height: 30px;">风格识别：曾雯欣 李心悦 张晟豪</text>
+<!-- </view>  -->
 </scroll-view>
