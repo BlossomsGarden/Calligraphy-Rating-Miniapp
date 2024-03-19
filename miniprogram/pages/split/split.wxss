@@ -1,0 +1,95 @@
+page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: linear-gradient(144.56deg, rgba(255, 255, 255, 0.6) 16.73%, rgba(230, 232, 237, 0.6) 85.71%);
+}
+
+.page-background {
+  position: relative; /* 确保子元素的绝对定位是相对于该元素 */
+  width: 100%; /* 容器宽度，根据需要调整 */
+  height: 100%; /* 容器高度，根据需要调整 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.title {
+  font-size: 18px;
+  text-align: center;
+  color: #00093b63;
+}
+.title.active{
+  color: #29354F;
+}
+
+.dot {
+  width: 8px; /* 圆点大小 */
+  height: 8px; /* 圆点大小 */
+  border-radius: 5px; /* 圆点半径 */
+  background-color: #00093B38; /* 非活动圆点颜色 */
+  margin: 0 5px; /* 圆点间隔 */
+}
+.dot.active {
+  background-color: #29354F;
+}
+
+.uploadImage{
+  display: flex;
+  margin: auto;
+  margin-top:8%;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.text{
+  margin: 5% auto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #00093B66;
+}
+
+/*底部图像框容器*/
+.FrameImgContainer {
+  display:flex; 
+  flex-flow:column wrap;
+  height: 160rpx;   /*可修改竖直间距(限定1行还是2行)*/
+  justify-content:space-between;
+}
+
+/*下方划动悬浮外框的属性设置*/
+.frame-img, .selected-frame-img {
+  margin-left: 0rpx;
+  margin-right: 32rpx;
+  width: 152rpx;
+  height: 152rpx;
+  background-color: #ffffff69;
+  border-radius: 10px;
+}
+
+.selected-frame-img {
+  border: 2px solid black;
+}
+
+.card {
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 12%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1rpx solid rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 80%;
+  font-size: 18px;
+  color: #8798BA;
+  height: 58px;
+  background: #F0F1F5;
+}

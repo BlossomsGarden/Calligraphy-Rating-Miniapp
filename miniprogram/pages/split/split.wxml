@@ -1,0 +1,34 @@
+<view class="page-background">
+  <image src="../../static/mine.png" style="height: 30px;width: 60px;margin-top: 8%;" bindtap="toMine"></image>
+
+  <view class="navbar">
+    <text class="title active">上传图片</text>
+    <text class="title">书法风格</text>
+    <text class="title">获取评分</text>
+  </view>
+
+  <view class="navbar">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </view>
+
+  <image src="{{uploadBase64}}" class="uploadImage" mode="aspectFit" bindtap="jump" />
+
+  <view class="text">滑动选择需要评分的书法字</view>
+
+  <scroll-view scroll-x="true" style="width: 80%;margin: auto;margin-top:5%;">
+    <view class='FrameImgContainer'>
+      <image 
+        wx:for="{{character}}" 
+        src="{{item.src}}" 
+        bindtap="onFrameSelect" 
+        data-idx='{{item.id}}' 
+        data-imgsrc="{{item.src}}" 
+        class="{{currentImageIndex==item.id ? 'selected-frame-img':'frame-img'}}" 
+      />
+    </view>
+  </scroll-view>
+
+  <view class="card" mode="aspectFit" bindtap="confirmed">确认</view>
+</view>

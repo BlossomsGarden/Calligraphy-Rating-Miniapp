@@ -1,0 +1,22 @@
+<scroll-view class="scrollarea" scroll-y type="list">
+  <image src="../../static/tjbk.png" class="background-image"></image>
+  <image src="../../static/left.png" class="arrow-left" bindtap="back"></image>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" />
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view style="display:flex;align-items:center;width: 80%;margin: 10% auto 1%;" bindtap="getUserProfile">
+    <text style="font-size: 16px;color: black;flex-grow: 1;">账号登录</text>
+    <image src="../../static/right.png" style="height: 30px;width:30px;right: 0;color: black;" />
+  </view>
+  <view class="line"></view>
+  <view style="margin-top: 10%;margin-left: 10%;">关于我们：</view>
+  <image src="../../static/tjfg.png" style="max-width: 80%;display: flex;height: 10%;margin:10% auto 5%;"/>
+  <text style="margin-left: 10%; width: 80%;display: flex;line-height: 16px;">
+    本小程序由同济大学叶晨老师字字珠济\n
+    团队开发，开发人员：\n
+    汪林辉 曾雯欣 蒋天逸 \n
+    楼亿 李心悦 车艺莹 杨阳璐\n
+  </text>
+</scroll-view>

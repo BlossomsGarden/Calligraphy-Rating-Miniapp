@@ -1,0 +1,43 @@
+<view class="page-background">
+  <image src="../../static/mine.png" style="height: 30px;width: 60px;margin-top: 8%;" bindtap="toMine"></image>
+
+  <view class="navbar">
+    <text class="title">上传图片</text>
+    <text class="title">书法风格</text>
+    <text class="title active">获取评分</text>
+  </view>
+
+  <view class="navbar">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot active"></div>
+  </view>
+
+  <view class="imgContainer">
+    <image src="{{selectedBase64}}" class="imgs"/>
+    <image src="{{demoBase64}}" class="imgs"/>
+  </view>
+
+  <view style="display:flex;align-items:center;width: 80%;margin: 10% auto 3%;">
+    <text class="left-title">评分：</text>
+    <text class="right-title">{{score}}</text>
+  </view>
+  <view class="line"></view>
+
+  <view class="title-container">
+    <text class="left-title">神韵相似：</text>
+    <text class="right-title" >{{charmScore}}</text>
+  </view>
+  <view class="line"></view>
+
+  <view class="title-container">
+    <text class="left-title">修改意见：</text>
+  </view>
+  
+  <view style="margin-bottom: 5%;">
+    <text wx:for="{{marks}}" class="content">{{item+'\n'}}</text>
+  </view>
+  <view class="line"></view>
+
+  <view class="card" mode="aspectFit" bindtap="home">返回首页</view>
+</view>

@@ -1,0 +1,29 @@
+<view class="page-background">
+  <image src="../../static/tjbk.png" class="background-image"></image>
+  
+  <image src="../../static/mine.png" style="height: 30px;width: 60px;margin-top: 8%;" bindtap="toMine"></image>
+
+  <view class="navbar">
+    <text class="title active">上传图片</text>
+    <text class="title">书法风格</text>
+    <text class="title">获取评分</text>
+  </view>
+  
+  <view class="navbar">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </view>
+
+  <view class="card" data-type="single" bindtap="uploadAction">
+    <image src="../../static/single.png" alt="Icon"/>
+    <span class="card-text">上传单字</span>
+  </view>
+
+  <view class="card" data-type="practice" bindtap="uploadAction">
+    <image src="../../static/many.png" alt="Icon" />
+    <span class="card-text">上传习作</span>
+  </view>
+</view>
+
+
