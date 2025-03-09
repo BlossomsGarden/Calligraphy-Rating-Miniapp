@@ -1,0 +1,12 @@
+50,     train_accury     1.0       test_accury     0.8645833333333334
+100,     train_accury     1.0       test_accury     0.8541666666666666
+150,     train_accury     1.0       test_accury     0.8541666666666666
+200,     train_accury     1.0       test_accury     0.84375
+250,     train_accury     1.0       test_accury     0.8541666666666666
+300,     train_accury     1.0       test_accury     0.8333333333333334
+350,     train_accury     1.0       test_accury     0.84375
+400,     train_accury     1.0       test_accury     0.84375
+450,     train_accury     1.0       test_accury     0.8541666666666666
+500,     train_accury     1.0       test_accury     0.8645833333333334
+550,     train_accury     1.0       test_accury     0.8333333333333334
+600,     train_accury     1.0       test_accury     0.8333333333333334
